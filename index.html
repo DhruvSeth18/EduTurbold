@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>EduTurbold</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/aa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+</head>
+<body onload="myFunction()">
+    <div id="loading">
+        <div class="logo">
+            
+        </div>
+
+    </div>
+
+    <!-- code for the navigation bar  -->
+
+    <header id="header" style="display: none;">
+        <div class="navbar" id="navbar">
+            <div class="logo">
+                <img src="./t.png"  width="85px" height="85px">
+            </div>
+            <ul class="links">
+                <li><a href="./About Us/Dhruv.html" target="_blank">About Us</a></li>
+                <li><a href="#" onclick="scrollToCourses()">Courses</a></li>
+                <li><a href="./TwoButtonsProject.html" target="_blank">Study Tools</a></li>
+                <li><a href="./Notes/Notes.html" target="_blank">Notes</a></li>
+                <li><a href="">Profile</a></li>
+            </ul>
+            <div class="showPro" id="showPro">
+                <a href="#" class="action_button" id="action_button" onclick="showlogin()">Log In</a>
+                <img id="showProImg" src="./logo.png" alt="">
+                <p id="showname">Profile</p>
+            </div>
+            <div class="toggle_button">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="drop_down ">
+            <li><a href="./About Us/Dhruv.html" target="_blank">About Us</a></li>
+            <li onclick="scrollToDropCourses()"><a href="#">Courses</a></li>
+            <li><a href="./TwoButtonsProject.html" target="_blank">Study Tools</a></li>
+            <li><a href="./Notes/Notes.html" target="_blank">Notes</a></li>
+            <li><a href="#">Profile</a></li>
+            <li onclick="showDroplogin()"><a href="#" >Log In</a></li>
+        </div>
+        <div class="image">
+            <div class="header-content" >
+                <img src="./quote.png">
+                <br>
+                <br>
+                <br>
+                <a href="#" onclick="showJoin()">JOIN US
+                    <div class="wave">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="Login"  id="Login" style="display: none;">
+            <span id="closePopup" onclick="openlogin()" class="close-popup">&times;</span>
+            <div class="InsideLogin">
+                <input style="margin-bottom: 20px;" placeholder="Enter Your Email" type="text">
+                <input style="margin-bottom: 40px;" type="password" placeholder="Enter your Password">
+                <a href="#" id="loginB">Log In</a>
+                <div class="forgotpassword">
+                    <a href="">Forgot password</a>
+                </div>
+            </div>
+        </div>
+        <div class="Join" id="Join" style="display: none;">
+            <span id="closePopup" onclick="closeJoin()" class="close-popup">&times;</span>
+            <div class="JoinMain" id="JoinMain">
+                <div class="ProfileInside">
+                    <div class="Profile" id="Profile">
+                        <p id="ProfilePicture">Drag & Drop <br> Your Profile here</p>
+                        <img id="image1" src="" alt="">
+                    </div>
+                </div>
+                <div class="Information">
+                    <input type="text" class="" id="JoinName" placeholder="Enter Your name">
+                    <input type="text" class="" id="JoinEmail" placeholder="Enter Your Email">
+                    <input type="password" class="" id="JoinPassword" placeholder="Enter Password">
+                    <input type="password" class="" id="JoinConfirm" placeholder="Confirm Password">
+                    <button onclick="JOIN()">Join</button>
+                </div>
+            </div>
+            <div class="Submitted" id="Submitted" style="display: none;">
+                <p style="font-size: 30px; font-weight: bold; color: white; text-align: center;">You Are Signed In</p>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- the course Section  -->
+
+
+    <div id="courses" style="display: none;">
+        <div class="features3" id="feature3">
+            <div class="Head_text">
+                <h3> Our <span>Courses</span></h3>
+            </div>
+            <div class="box_container">
+                <div class="box">
+                    <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.852353512.1682838030&semt=ais">
+                    <h3>WEB DEV Course</h3>
+                    <p>The Best Course Available Online</p>
+                    <a href="./WebDevProject.html" target="_blank">Buy Now @ 1599</a>
+                </div>
+
+                <div class="box">
+                    <img src="https://img.freepik.com/premium-photo/java-programming-code-abstract-technology-background_272306-149.jpg?size=626&ext=jpg&ga=GA1.1.852353512.1682838030&semt=sph" alt="">
+                    <h3>JAVA Course</h3>
+                    <p>The Best Course Available Online</p>
+                    <a href="./java.html" target="_blank">Buy Now @ 1899</a>
+                </div>
+
+                <div class="box">
+                    <img src="https://img.freepik.com/premium-photo/automation-data-analytic-with-robot-digital-visualization-big-data-scientist_493806-15023.jpg?size=626&ext=jpg&ga=GA1.2.852353512.1682838030&semt=sph" alt="">
+                    <h3>AI/ML Course</h3>
+                    <p>The Best Course Available Online</p>
+                    <a href="./AI_ML.html" target="_blank" >Buy Now @ 2599</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- the review section -->
+
+    <div class="Swipeheading" id="Swipeheading" style="display: none;">
+        <h2>Hear What Others Are Saying About EduTurbold!</h2>
+    </div>
+    <div class="Swipeborder" id="Swipeborder" style="display: none;"></div>
+    <div class="swipeInside" id="swipeInside" style="display: non;">
+        <div class="abc" id="abc" style="display: none;">
+            <div class="swiper mySwiper" style="padding-top: 4vh; padding-bottom: 4vh;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/kapoor.png" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Dhruv Kapoor</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/sehal.jpg" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Dhruv Sehal</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/dhruv.jpg" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Dhruv Seth</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/mehta.jpg" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Dhruv Mehta</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/himanshu.jpeg" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Himanshu </h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/deepankar.jpg" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Deepankar Garg</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/ujjwal.png" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Ujjwal</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/Navjot singh.png" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>Navjot Singh</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swipeImage">
+                            <img src="./team mates/Hr.png" alt="">
+                        </div>
+                        <div class="swipeText">
+                            <h4>The Hr</h4>
+                            <p>"EduTurbold is a fantastic resource for students of all ages. The site offers a wide range of educational materials and tools that have greatly enhanced my learning experience. Highly recommended!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination" style="position: relative; bottom: 4vh;"></div>
+            </div>
+        </div>
+        <div class="swiper-button-next" style="position: absolute; margin-right: 3vw;"></div>
+        <div class="swiper-button-prev" style="position: absolute; margin-left: 3vw;"></div>
+    </div>
+
+    <!-- THE FEATURE 2 Contact section  -->
+
+
+    <div id="Map" style="display: none;">
+        <div class="container-fluid" id="Maps">
+            <div class="gmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.1751352135634!2d76.65719751039572!3d30.5160864745839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1682795098145!5m2!1sen!2sin" ></iframe>
+            </div>
+            <div class="Contact">
+                <div id="formSubmit">
+                    <p> Your Form is Successfully Submitted</p>
+                </div>
+                <form id="contactForm" action="https://formspree.io/f/xqkoojkk" method="post">
+                    <div>
+                    <p style="color: #002c87;">Contact Form</p>
+                    <input type="text"  placeholder="Type your Name here" id="nameContact" name="Name">
+                    <input type="text" placeholder="Enter your Email" id="emailContact" name="Email">
+                    <textarea cols="30" rows="10" style="padding: 2vh;" placeholder="Your Message Here" name="YourMessage"></textarea>
+                </div>
+                <div class="buttonsection">
+                    <button id="submitContact" onclick="submitContact()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- the share button  -->
+
+    
+    <div class="ShareButton" id="ShareButton" style="display: none;">
+        <div class="share">
+            <a href="#" class="facebook-btn" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="twitter-btn" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="pinterest-btn" target="_blank">
+                <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#" class="linkedin-btn" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="whatsapp-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+    
+        </div>
+    </div>
+
+    <!-- the footer section  -->
+
+    <div class="container-fluid" id="footer" style="display: none;" >
+        <div class="row" style="margin-top: 10vh;">
+            <div class="col-lg-3 col-sm-6" id="footer-image" style=" position: relative;">
+                <img src="./logo.png">
+            </div>
+            <div class="col-lg-3 col-sm-6"  style=" position: relative;">
+                <ul style="position: absolute;">
+                    <h4>Helpful Links</h4>
+                    <li><a onclick="scrollUpCourses()" href="#"> Courses</a></li>
+                    <li><a href="#"> Privacy Policy</a></li>
+                    <li><a href="#"> Refund & cancellation<br><span style="text-indent: 10px;">Policy</span></a> </li>
+                    <li><a href="#"> Terms and condition</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6" style=" position: relative;">
+                <ul>
+                    <h4>Get In Touch </h4>
+                    <li><a href="mailto: eduturbold@gmail.com"> eduturbold@gmail.com</a> </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-sm-6" style=" position: relative;">
+                
+                <ul>
+                    <h4>Connect with US</h4>
+                    <li><a href="#"> Facebook</a></li>
+                    <li><a href="#"> Twitter</a></li>
+                    <li><a href="#"> youtube</a></li>
+                    <li><a href="#"> Instagram</a></li>
+                    <li><a href="#"> Linkedin</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- the javascript area  -->
+    
+
+    <script>
+        var pre = document.getElementById('loading');
+        function myFunction(){
+            pre.style.display = 'none';
+            document.getElementById("header").style.display = "block"
+            document.getElementById("footer").style.display = "block"
+            document.getElementById("Swipeheading").style.display = "block"
+            document.getElementById("Swipeborder").style.display = "block"
+            document.getElementById("swipeInside").style.display = "block"
+            document.getElementById("abc").style.display = "block"
+            document.getElementById("ShareButton").style.display = "flex"
+            document.getElementById("Map").style.display = "flex"
+            document.getElementById("courses").style.display = "block"
+        }
+        const togglebtn = document.querySelector('.toggle_button')
+        const toggleIcon = document.querySelector('.toggle_button i')
+        const drop_do = document.querySelector('.drop_down')
+
+        togglebtn.onclick = function (){
+            drop_do.classList.toggle('open')
+        }
+
+        // the script for the social share button 
+        const facebookBtn = document.querySelector(".facebook-btn");
+        const twitterBtn = document.querySelector(".twitter-btn");
+        const whatsappBtn = document.querySelector(".whatsapp-btn");
+        const linkedinBtn = document.querySelector(".linkedin-btn");
+        const pinterestBtn = document.querySelector(".pinterest-btn");
+
+        function init() {
+            const pinterestImg = document.querySelector(".pinterest-img");
+            let postUrl = encodeURI(document.location.href);
+            // let postImg = encodeURI(pinterestImg.src);
+            let postTitle = encodeURI("Hey there,\n\nI recently joined EduTurbold, an awesome education site that provides a wealth of resources and information to learners of all levels. Whether you're a student, professional, or lifelong learner, EduTurbold has something for you.\n\nI've found the site to be incredibly helpful in improving my skills and knowledge in various subjects, and I think you'll benefit from it too. So why not join me and become a part of this amazing community of learners?\n\nYou can sign up for free and start exploring the wide range of courses, tutorials, and other resources available on EduTurbold. And if you find something that you think would be useful to others, don't hesitate to share it with your friends and colleagues.\n\n www.EduTurbold.com");
+            let postTitle2 = encodeURI("Just joined EduTurbold\n\n An awesome education site with a wealth of resources for learners of all levels. \nImprove your skills and knowledge today! \nJoin EduTurbold Today\n\n www.EduTurbold.com" )
+            facebookBtn.setAttribute("href", `https://www.facebook.com/sharer.php?u=${postUrl}`);
+            twitterBtn.setAttribute("href", `https://twitter.com/share?url=&text=${postTitle2}`);
+            whatsappBtn.setAttribute("href", `https://wa.me/?text=${postTitle} `);
+            linkedinBtn.setAttribute("href", `https://www.linkedin.com/shareArticle?url=&title=${postTitle}`);
+            pinterestBtn.setAttribute("href",`https://pinterest.com/pin/create/bookmarklet/?media=&url=&description=${postTitle}`);
+            
+        }
+        init();
+        var swiper = new Swiper(".mySwiper", {
+            initialSlide: 0,
+            grabCursor: true,
+            spaceBetween: 40,
+            fade:true,
+            centeredSlides: true,
+            loop:true,
+            pagination: {
+                el: ".swiper-paginatio n",
+                clickable: true,
+                dynamicBullets:true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            breakpoints:{
+                0: {
+                    slidesPerView:1,
+                },
+                550:{
+                    slidesPerView:1.5,
+                },
+                794:{
+                    slidesPerView:1.95,
+                },
+                880:{
+                    slidesPerView:2.3,
+                },
+                950:{
+                    slidesPerView:2.9,
+                }
+            },
+        });
+        function submitContact(){
+            var nameContact = document.getElementById("nameContact").value
+            var emailContact = document.getElementById("emailContact").value
+            var validEmail = emailContact.slice(-10)
+            console.log(validEmail)
+            if(nameContact==""){
+                alert("Please Enter your name before Submit")
+            }
+            else{
+                if(emailContact==""){
+                    alert("Please Enter your Email before Submit")
+                }
+                else{
+                    if(validEmail!="@gmail.com"){
+                        alert("Please Enter a Verified Email")
+                    }
+                    else{
+                        document.getElementById("formSubmit").style.display ="flex"
+                        document.getElementById("contactForm").style.display = "none"
+                        document.getElementById("submitContact").style.display = "none"
+                    }
+                }
+            }
+        }
+        function scrollToCourses(){
+            window.scrollTo(0,800);
+        }
+
+        function openlogin(){
+            document.getElementById("Login").style.display = "none"
+        }
+        function showlogin(){
+            document.getElementById("Login").style.display = "inline-block"
+        }
+        function scrollToDropCourses(){
+            drop_do.classList.toggle('open')
+            window.scrollTo(0,750);
+        }
+        function showDroplogin(){
+            drop_do.classList.toggle('open')
+            document.getElementById("Login").style.display = "inline-block"
+        }
+        function main(){
+            var abc= document.getElementById("filePhoto").value
+            abc = abc.replace("C:\\fakepath\\", "");
+            console.log(abc)
+            document.getElementById("ProfilePicture").style.display = "inline-block"
+            document.getElementById("ProfilePicture").src = abc;
+            document.getElementById("UploadImage").style.display = "none"
+        }
+        const dropArea = document.getElementById("Profile");
+        dropArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            dropArea.classList.add("change");
+        });
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.classList.remove("change");
+        });
+        var imageUrl;
+        dropArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            const image = e.dataTransfer.files[0];
+            const imageUrl = URL.createObjectURL(image);
+            console.log(image)
+            document.getElementById("ProfilePicture").style.display="none"
+            document.getElementById("image1").style.display = "inline-block"
+            document.getElementById("image1").src = imageUrl;
+            document.getElementById("showProImg").src = imageUrl;
+        });
+        function closeJoin(){
+            document.getElementById("Join").style.display = "none"
+        }
+        function showJoin(){
+            document.getElementById("Join").style.display = "inline-block"
+        }
+        function JOIN() {
+            var JoinName = document.getElementById("JoinName");
+            var JoinEmail = document.getElementById("JoinEmail");
+            var JoinPassword = document.getElementById("JoinPassword");
+            var JoinConfirm = document.getElementById("JoinConfirm");
+
+            console.log(JoinName.value);
+            console.log(JoinEmail.value);
+            console.log(JoinPassword.value);
+
+            var check = [JoinName, JoinEmail, JoinPassword, JoinConfirm];
+            var isValid = true;
+
+            for (var i = 0; i < check.length; i++) {
+                if (check[i].value === "") {
+                    check[i].classList.add("invalid");
+                    isValid = false;
+                } else {
+                    check[i].classList.remove("invalid");
+                }
+            }
+            if(JoinEmail.value.slice(-10)!="@gmail.com"){
+                alert("Please Enter a Valid Mail Address")
+                return;
+            }
+            if (!isValid) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            if (JoinConfirm.value !== JoinPassword.value) {
+                alert("Your password and confirm password do not match.");
+                return;
+            }
+            alert("You have successfully joined.");
+            document.getElementById("JoinMain").style.display = "none"
+            document.getElementById("Submitted").style.display = "flex"
+            document.getElementById("action_button").style.display = "none";
+            document.getElementById("showProImg").style.display = "block"
+            document.getElementById("showname").style.display = "block"
+            document.getElementById("showname").innerHTML = JoinName.value;
+            document.getElementById("navbar").style.paddingRight ="3vw";
+            document.getElementById("showPro").style.marginTop = "20px";
+        }
+
+    </script>
+</body>
+</html>

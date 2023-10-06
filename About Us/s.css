@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.container{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3f2fd;
+}
+.testimonial{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 0;
+    row-gap: 30px;
+}
+.testimonial  img{
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border: 3px solid yellow;
+    border-radius: 50%;
+    row-gap: 30px;
+}
+.testimonial .slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.slide p{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    padding: 0 160px;
+}
+.slide .quote-icon{
+    font-size: 30px;
+    color: #4070f4;
+}
+.slide .details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details .name{
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+.details .job{
+    font-size: 13px;
+    font-weight: 400;
+    color: #333;
+}

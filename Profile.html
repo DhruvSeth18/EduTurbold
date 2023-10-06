@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+  }
+  body {
+    background-color: #091921;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  .droparea {
+    height: 400px;
+    width: 400px;
+    border: 1px dashed gray;
+    color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+  }
+  .hover {
+    color: #fff;
+    border: 1px dashed #fff;
+  }
+  .valid {
+    color: #fff;
+    background-color: green;
+    border: 1px solid green;
+  }
+  .invalid {
+    color: #fff;
+    background-color: red;
+    border: 1px solid red;
+  }
+</style>
+<body>
+  <div class="droparea" id="dropArea">
+    <div class="im">
+      <img src=""  style="width: 100%; height: 100%;" id="image" alt="">
+    </div>
+  </div>
+
+  <script>
+    const dropArea = document.getElementById("dropArea");
+
+    dropArea.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropArea.classList.add("hover");
+    });
+
+    dropArea.addEventListener("dragleave", () => {
+      dropArea.classList.remove("hover");
+    });
+
+    dropArea.addEventListener("drop", (e) => {
+      e.preventDefault();
+
+      const image = e.dataTransfer.files[0];
+      const imageUrl = URL.createObjectURL(image);
+      console.log(image)
+      document.getElementById("image").src = imageUrl;
+    });
+  </script>
+</body>
+</html>

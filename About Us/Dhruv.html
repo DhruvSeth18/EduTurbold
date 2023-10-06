@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="s.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+<body>
+    <section id="Navsec">
+        <img src="logo.png" alt="">
+        <div>
+            <ul class="nav">
+                <li><a href="#">EduTurbold</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Study Tools</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+        <div class="login">
+            <button id="log">Log in</button>
+        </div>
+    </section>
+    <section id="about">
+        <div class="imag">
+            <img src="a2.png" alt="">
+        </div>
+        <div class="dis">
+            <h2>What is <span>EduTurbold</span>?</h2><!--What is our Motive-->
+            <p>At Edu Turbold, our mission is to empower learners of all ages and backgrounds by providing high-quality educational resources. We believe that education is the key to unlocking one's potential and achieving personal and professional success. Through our platform, we strive to make learning accessible, engaging, and interactive for everyone.
+            </p>
+            <marquee behavior="alternate" direction="Left"><h4> "Discover, learn, excel."</h4></marquee>
+        </div>
+    </section>
+    <section id="reviews">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!-- ----main section----- -->
+                <section class="container">
+                    <div class="testimonial">
+                        <div class="testi-content">
+                            <div class="slide">
+                                <img src="dhruv.jpg" alt="">
+                                <p>We are committed to offering a diverse range of learning opportunities to cater to different learning styles and preferences. Whether you are a student, professional, or simply curious about a particular subject, Edu Turbold offers a wide variety of courses, tutorials, and resources across various disciplines. Our aim is to create a vibrant community of lifelong learners.</p>
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <div class="details">
+                                    <span class="name">Dhruv Seth</span>
+                                    <span class="position">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- ----main section close----- -->
+            </div>
+            <div class="swiper-slide">
+            <!-- ----main section close----- -->
+                <section class="container">
+                    <div class="testimonial">
+                        <div class="testi-content">
+                            <div class="slide">
+                                <img src="D:\WEB DEV\Edu Turbold\team mates\kapoor.png" alt="">
+                                <p>We are committed to offering a diverse range of learning opportunities to cater to different learning styles and preferences. Whether you are a student, professional, or simply curious about a particular subject, Edu Turbold offers a wide variety of courses, tutorials, and resources across various disciplines. Our aim is to create a vibrant community of lifelong learners.</p>
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <div class="details">
+                                    <span class="name">Dhruv Seth</span>
+                                    <span class="position">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- ----main section close----- -->
+            </div>
+            <div class="swiper-slide">
+            <!-- ----main section close----- -->
+                <section class="container">
+                    <div class="testimonial">
+                        <div class="testi-content">
+                            <div class="slide">
+                                <img src="D:\WEB DEV\Edu Turbold\team mates\sehal.jpg" alt="">
+                                <p>We are committed to offering a diverse range of learning opportunities to cater to different learning styles and preferences. Whether you are a student, professional, or simply curious about a particular subject, Edu Turbold offers a wide variety of courses, tutorials, and resources across various disciplines. Our aim is to create a vibrant community of lifelong learners.</p>
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <div class="details">
+                                    <span class="name">Dhruv Seth</span>
+                                    <span class="position">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- ----main section close----- -->
+            </div>
+            <div class="swiper-slide">
+            <!-- ----main section close----- -->
+                <section class="container">
+                    <div class="testimonial">
+                        <div class="testi-content">
+                            <div class="slide">
+                                <img src="D:\WEB DEV\Edu Turbold\team mates\mehta.jpg" alt="">
+                                <p>We are committed to offering a diverse range of learning opportunities to cater to different learning styles and preferences. Whether you are a student, professional, or simply curious about a particular subject, Edu Turbold offers a wide variety of courses, tutorials, and resources across various disciplines. Our aim is to create a vibrant community of lifelong learners.</p>
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <div class="details">
+                                    <span class="name">Dhruv Seth</span>
+                                    <span class="position">Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <!-- ----main section close----- -->
+            </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
+    </section>
+    <section id="banner">
+            <div class="des">
+                <h2>#About Us</h2>
+                <h4>Welcome to our <span>Educational Site</span></h4>
+            </div>
+        </section>
+</body>
+</html>

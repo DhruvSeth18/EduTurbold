@@ -1,0 +1,941 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color:#002c87;
+}
+@font-face {
+    font-family: myfont;
+    src: url(./Zallord\ free.ttf);
+}
+
+
+/* the header operation  */
+header{
+    position: relative;
+    padding: 0;
+}
+
+/* All navbar codes below this point  */
+
+.navbar{
+    background-color: white;
+    width: 100%;
+    padding-left: 4vw;
+    padding-right: 5vw;
+    height: 80px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img{
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+.navbar .links{
+    margin-top: 20px;
+    display: flex;
+    gap: 3rem;
+}
+.navbar .links li{
+    list-style: none;
+}
+
+.navbar .toggle_button{
+    color: black;
+    font-size: 2.4rem;
+    cursor: pointer;
+    display: none;
+}
+.navbar .action_button{
+    border: 0;
+    outline: 0;
+    margin-top: 16px;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: orange;
+}
+
+.navbar .action_button:hover{
+    scale: 1.05;
+}
+
+.navbar .action_button:active{
+    scale: 0.95;
+}
+
+.navbar .logo img{
+    margin-top: 20px;
+    width:"100px";
+    height:"100px";
+}
+
+
+/* the link  */
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+}
+a:hover{
+    color: #034bd9;
+    scale: 1.05;
+}
+
+.navbar .showPro{
+    display: flex; 
+
+}
+.navbar #showProImg{
+    display: none; 
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    border: 1px solid black;
+}
+.navbar #showname{
+    display: none; 
+    margin-top: 13px; 
+    margin-left: 25px;
+}
+
+
+
+/* drop down menu  */
+
+
+.drop_down{
+    position: absolute;
+    top: 200px;
+    right: 2rem;
+    width: 330px;
+    height: 0;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    transition: height 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 10;
+}
+
+.drop_down.open{
+    height: 352px;
+    border: 1px solid black;
+}
+.drop_down li{
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drop_down li a{
+    font-weight:bold;
+    color: rgb(6, 0, 0);
+}
+.drop_down li:nth-child(1):hover,.drop_down li:nth-child(2):hover,.drop_down li:nth-child(3):hover,.drop_down li:nth-child(4):hover,.drop_down li:nth-child(5):hover,.drop_down li:nth-child(6):hover{
+    background-color: rgb(49, 179, 255);
+}
+.drop_down a:hover{
+    background-color: none;
+    color: black;
+    font-size: 1.1rem;
+    border: 0;
+}
+
+/* Login Section */
+.Login{
+    width: 330px;
+    height: 350px;
+    position: absolute;
+    background-color: #0A66C2;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    padding-top: 3vh;
+    transform: translate(-50%, -50%);
+}
+.Login span{
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    padding-top: 3px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: white;
+    color: #002c87;
+    outline: 2px solid #002c87;
+    outline-offset: -0.3rem;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+}
+.Login .InsideLogin{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding-top: 6vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Login .InsideLogin .forgotpassword{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    padding-right: 15px;
+}
+.Login .InsideLogin input{
+    width: 80%;
+    border-radius: 10px;
+    border: 0;
+    height: 45px;
+    color: #002c87;
+    padding: 15px;
+    font-size: 15px;
+    outline: 0;
+    outline-offset: 0;
+}
+.Login .InsideLogin #loginB{
+    background-color: white;
+    padding: 0.3rem 2.5rem;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.Login .InsideLogin #loginB:hover{
+    scale: 0.95;
+}
+.Login .InsideLogin #loginB:active{
+    scale: 1.05;
+}
+.Login .InsideLogin input::placeholder{
+    color: #002c87;
+    font-size: 15px;
+}
+.Login .forgotpassword a{
+    background-color:none;
+    padding: 0;
+    color: white;
+}
+
+
+
+/* Join div */
+
+.Join{
+    width: 330px;
+    height: 550px;
+    position: absolute;
+    background-color: #0A66C2;
+    top: 50%;
+    left: 50%;
+    padding-top: 3vh;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.Join .JoinMain{
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+.Join span{
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    padding-top: 3px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    background-color: white;
+    color: #002c87;
+    outline: 2px solid #002c87;
+    outline-offset: -0.3rem;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+}
+.Join .Profile{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: #00acee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.1px dashed crimson;
+    overflow: hidden;
+}
+.change{
+    border: 2px dashed crimson;
+    background-color: #bf6d02;
+}
+.Join .ProfileInside{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.Join .Information{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Join .Profile img{
+    scale: 1.02;
+    height: 100%; 
+    border-radius: 50%; 
+    display: none;
+}
+.Join .Information button{
+    padding: 0.3rem 0.6rem;
+    border-radius: 10px;
+    width: 50%;
+}
+.Join .Information button:hover{
+    scale: 0.99;
+}
+.Join .Information button:active{
+    scale: 1.01;
+}
+.Join .Information input[type="text"]{
+    border: 0.01px solid black;
+    outline: 0;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    width: 74%;
+}
+.Join .Information input[type="password"]{
+    border: 0.01px solid black;
+    outline: 0;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    width: 74%;
+}
+.Submitted{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* preloader */
+#loading{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loading .logo{
+    height: 150px;
+    width: 150px;
+    background: url(./output-onlinegiftools.gif) no-repeat center;
+    background-size: 100% 100%;
+}
+
+
+/* the center part  */
+
+.image{
+    width: 100%;
+    height: 89vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./water\ Layer\ Theme.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+/* the wave button  */
+
+.header-content{
+    position: relative;
+    bottom: 15vh;
+    max-width: 600px;
+    /* iske baare me padhna ha */
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+@media(max-width :450px) {
+    .header-content{
+        right: 5vw;
+    }
+}
+.header-content a{
+    padding: 18px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    color: #00a2ff;
+    letter-spacing: 2px;
+    position: relative;
+    border: 2px solid #00a2ff;
+}
+.header-content .wave{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0;
+    opacity: 30%;
+    background-size: 50% 100%;
+    background-image: url(wave2.png);
+    animation: Hello 3s linear infinite;
+}
+@keyframes Hello {
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
+.header-content a:hover{
+    border: 4px solid #00a2ff;
+
+}
+.wave:hover{
+    animation-play-state: paused;
+}
+.header-content img{
+    width: 450px;
+}
+
+
+
+
+
+/* the course Section  */
+
+.features3 .Head_text h3{
+    text-align: center;
+    padding: 3rem 0;
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    color: white;
+}
+.features3 .Head_text h3 span{
+    color: black;
+    font-weight: bold;
+    margin-top: 10vh;
+    background-color: orange;
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0%0%);
+}
+.features3 .box_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 2rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 8vh;
+}
+.features3 .box img{
+    width: 100%;
+    height: 50%;
+}
+.features3 .box{
+    background-color: white;
+    padding: 2rem 2rem;
+    outline: 0.2rem solid black;
+    height: 60vh;
+    outline-offset: -1rem;
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 12px -2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 1px 12px -2px rgba(255,255,255,1);
+    box-shadow: 0px 1px 12px -2px rgba(255,255,255,1);
+}
+.features3 .box h3{
+    margin-top: 2vh;
+    font-size: 1.9rem;
+}
+.features3 .box a{
+    text-decoration: none;
+    padding: 0.7rem 2.2rem;
+    border: 2px solid black;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+.features3 .box p{
+    margin-bottom: 7vh;
+}
+.features3 .box a:hover{
+    background-color: orange;
+    color: white;
+    border: orange;
+}
+
+.features3{
+    padding-bottom: 10vh;
+    background-color: #002c87;
+}
+::selection{
+    background-color:rgba(255, 166, 0, 0.383);
+}
+
+
+/* The Feature 2  */
+
+#Map{
+    padding-top: 20vh;
+}
+#Maps{
+    padding-top: 3vh;
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));
+    padding-top: 0vh;
+    padding-bottom: 10vh;
+}
+#Maps .Contact{
+    background-color:white;
+}
+#Maps iframe{
+    border-top-left-radius :10px;
+    border-bottom-left-radius: 10px;
+    width: 100%;
+    height: 100%;
+    border: 0.05px solid black;
+}
+#Maps .Contact{
+    text-align: center;
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    border: 0.05px solid black;
+}
+#Maps .Contact form p{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#Maps .Contact form input[type="text"]{
+    height: 6vh;
+    width: 75%;
+    margin-bottom: 2vh;
+    padding: 1rem;
+    padding-left: 0.2rem;
+    border: 0;
+    color: #002c87;
+    letter-spacing: 1.5px;
+    border-bottom: 2px solid black;
+}
+#Maps .Contact form input[type="text"]::placeholder{
+    background-color: white;
+    color: #002c87;
+    font-size: 16px;
+}
+#Maps .Contact form input[type="text"]:focus{
+    outline: 0;
+    border-bottom: 2px solid black;
+    outline-offset: 0;
+
+}
+#Maps .Contact form textarea{
+    height: 30vh;
+    width: 75%;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+    border: 2px solid black;
+}
+#Maps .Contact form textarea::placeholder{
+    color: #002c87;
+}
+#Maps .Contact button{
+    padding: 0.6rem 1.2rem;
+    width: 25%;
+    font-weight: bold;
+    font-size: 18px;
+    border: 0;
+    color: white;
+    outline: 0;
+    background-color: #002c87;
+    border-radius: 20px;
+}
+#Maps .Contact form button:hover{
+    background-color: orange;
+}
+#Maps .Contact #formSubmit{
+    width: 100%;
+    height: 100%;
+    height: 60vh;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+#Maps .Contact #formSubmit p{
+    font-size: 2rem;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #002c87;
+}
+#Map .Contact #contactForm div{
+    height: 70%;
+}
+#Map .Contact #contactForm .buttonsection{
+    height: 30%;
+}
+#Map .Contact #contactForm button:hover{
+    scale: 0.95;
+}
+#Map .Contact #contactForm button:active{
+    scale: 1.05;
+}
+/* the sharebutton div  */
+
+
+.ShareButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    border-top: 2px solid #ea8315;
+    border-bottom: 2px solid #ea8315;
+    background-color: white;
+}
+.ShareButton .share{
+    background-color: white;
+    border-radius: 10px;
+    border: 0;
+    padding: 0.05rem 0.5rem;
+    display: flex;
+    gap: 2rem;
+}
+.ShareButton .share a{
+    border: 0;
+    font-size: 3rem;
+}
+.ShareButton .share a:hover{
+    color: rgb(255, 119, 0);
+}
+.ShareButton .facebook-btn{
+    color: #3b5998;
+}
+.ShareButton .twitter-btn{
+    color: #00acee;
+}
+.ShareButton .pinterest-btn{
+    color: red;
+}
+.ShareButton .linkedin-btn{
+    color: #0A66C2;
+}
+.ShareButton .whatsapp-btn{
+    color: rgb(0, 197, 0);
+}
+
+
+/* the footer section  */
+
+
+#footer .col-lg-3,.col-sm-6{
+    height: 35vh;
+}
+#footer .col-lg-3,.col-sm-6 li{
+    list-style: none;
+    margin-top: 2.5px;
+}
+#footer.col-lg-3,.col-sm-6 li a{
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: black;
+}
+#footer .col-lg-3,.col-sm-6 h4{
+    font-weight: 600;
+}
+#footer .col-lg-3,.col-sm-6 li::before{
+    content: "\00BB";
+}
+#footer .col-lg-3,.col-sm-6 a:hover{
+    color: orange;
+}
+#footer img{
+    top: 5px;
+    left: 5px;
+    width: 51%;
+    height: 40%;
+}
+#footer{
+    width: 100%;
+    padding-top: 1vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    background-color: white;
+}
+/* Now the feature 1  */
+
+
+
+
+
+/* the image section  */
+/* All media query section  */
+
+@media(max-width:745px){
+    #Maps .gmap{
+        height: 72vh;
+    }
+}
+@media(max-width: 970px){
+    .navbar .links , .navbar .action_button{
+        display: none;
+    }
+    .navbar .showPro{
+        display: none;
+    }
+    .navbar .toggle_button{
+        margin-top: 8vh;
+        display: block;
+    }
+    .navbar .logo img{
+        width: 100px;
+        height: 100px;
+        margin-top: 49px;
+    }
+    .drop_down{
+        top: 120px;
+        display: block;
+    }
+    .header-content img{
+        width: 350px;
+    }
+    #footer .col-lg-3,.col-sm-6{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer .col-lg-3,.col-sm-6{
+        height: 40vh;
+    }
+    #footer img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+
+@media (max-width:576px) {
+    .drop_down{
+        top: 140px;
+        left: 2rem;
+        width: unset;
+    }
+    body{
+        padding: 0;
+    }
+    .header-content img{
+        width: 290px;
+    }
+    .header-content a{
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #00a2ff;
+        letter-spacing: 1px;
+    }
+    #footer .col-lg-3,.col-sm-6{
+        height: 25vh;
+    }
+    #footer .col-lg-3,.col-sm-6{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    #footer img{
+        width: 40%;
+        height: 80%;
+        position: relative;
+        left: 29vw;
+    }
+    .ShareButton .share a{
+        font-size: 2rem;
+    }
+    #Maps{
+        margin-bottom: 10vh;
+    }
+    #Maps .Contact{
+        border-radius: 0;
+    }
+    #Maps .iframe{
+        border-radius: 0;
+    }
+}
+@media (max-width:663px) {
+    #Maps .Contact{
+        border-radius: 0 0 10px 10px;
+        /* border-bottom-right-radius:10px ;
+        border-bottom-left-radius:10px ; */
+    }
+    #Maps iframe{
+        border-radius: 10px 10px 0 0;
+    }
+}
+@media(max-width: 650px){
+    .pomodoroNavigation{
+        flex-direction: column;
+        width: 100%;
+    }
+    .pomodoroNavigation .pomoImage{
+        width: 100%;
+    }
+    .pomodoroNavigation .pomoText{
+        width: 100%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .pomodoroNavigation .pomoHeading p{
+        font-size: 35px;
+    }
+}
+
+.swipeInside{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 5vh;
+}
+.swipeInside .abc{
+    width: 95%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.swipeInside .swiper {
+    width: 100%;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.swipeInside .swiper-slide{
+    width: 30vw;
+    width: 60vh;
+    text-align: center;
+    font-size: 18px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+.swipeInside .swipeImage{
+    flex-basis: 50%;
+    width: 100%;
+    height: 30vh;
+    background-color: #009dff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:3vw;
+}
+.swipeInside .swipeImage img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+.swipeInside .swipeText{
+    flex-basis: 50%;
+    width: 100%;
+    height: 30vh;
+    padding: 0;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 8vh;
+    padding-top: 1vh;
+}
+.swiper-slide:hover {
+    scale: 1.02; /* Increase the scale on hover */
+}
+.swipeInside .swipeText h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.swipeInside .swipeText p{
+    font-size: 15px;
+    text-align: center;
+}
+
+.invalid{
+    background-color: rgb(223, 194, 194);
+}
+.Swipeheading{
+    height: 20vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.Swipeheading h2{
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.Swipeborder{
+    border: 4px solid orange;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}

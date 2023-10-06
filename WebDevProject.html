@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body{
+            width: 100%;    
+            height: 100vh;
+            background-color: #fff;
+        }
+        .main{
+            /* background-color: aqua; */
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+            position: relative;
+        }
+        .text{
+            height: 100vh;
+            /* background-color: rgb(255, 0, 0); */
+            padding-left: 6vw;
+            padding-right: 6vw;
+            padding-top: 18vh;
+        }
+        .picture{
+            /* background-color: rgb(30, 0, 255); */
+            height: 100vh;
+            padding-left: 10vw;
+            padding-right: 5vw;
+            padding-top: 15vh;
+        }
+        .photo {
+            width: 100%;
+            height: 75%;
+            border-radius: 10px;
+            /* border: 5px solid crimson; */
+            background-image: url("https://img.freepik.com/premium-vector/web-developer-is-analyzing-programming-language_18660-442.jpg?size=626&ext=jpg&ga=GA1.2.852353512.1682838030&semt=ais");
+
+        }
+        .photo img{
+            border-radius: 10px;
+
+        }
+
+        
+        .content{
+            width: 100%;
+            height: 89vh;
+        }
+        .Name {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 10px; */
+            color: rgb(78, 72, 72);
+            display: flex;
+            /* justify-content: left; */
+            /* align-items: center; */
+            /* top: 20vh; */
+            flex-direction: column;
+            margin-top: 17vh;
+           
+            
+        }
+        .Name h1{
+            padding-left: 1vw;
+            
+        }
+        .Name h4{
+            /* position: absolute; */
+            /* top: 10vh; */
+            font-weight: 600;
+            font-size: 80px;
+        }
+        .About{
+            
+            width: 100%;
+            height: 20vh;
+            text-align: center;
+            /* background-color: violet; */
+            background-color: black;
+            color: #fff;
+            padding-top: 6vh;
+            padding-bottom: 5vh;
+        }
+        .About p{
+            font-size: 2rem;
+            color: white;
+        }
+        .About span{
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.5rem;
+            background-color: orange;
+            display: inline-block;
+            padding: 1.0rem 2.5rem;
+            clip-path: polygon(100% 0,93% 50%,100% 99%,0% 100%,7% 50%,0%0%);
+        }
+        .BuyButton{
+            background-color: black;
+            height: 20vh;
+            width: 100%;
+        }
+        .freeSpace{
+            height:10vh;
+            width: 100%;
+            background-color: black;
+        }
+        .buy{
+            background-color: black;
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-around;
+            padding-left: 15vw;
+            padding-right: 15vw;
+        }
+        
+        .buy li{
+
+            list-style: none;
+            flex-basis: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: blueviolet; */
+        }
+        
+       
+        .gd{
+            color: rgb(63, 59, 59);
+            font-size: 1.3rem;
+            margin-left: 20px;
+        }
+        .popup{
+            width: 25%;
+            height: 70vh;
+            top: 10vh;
+            
+            left: 37.5%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            column-gap: 2rem;
+            /* border: 1px solid black; */
+        }
+        .popupMain{
+            width: 35vw;
+            height: 100%;
+            background-color: rgb(21, 20, 20);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 2rem;
+            border-radius: 10px;
+        }
+        .popupMain div:nth-child(1){
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+        .popupMain input{
+            border: 0;
+            outline: 0;
+            border-radius: 10px;
+            height: 2rem;
+            padding: 10px;
+            width: 15rem;
+            margin-left: 15px;
+        }
+        .popupMain label{
+            font-size: 1.3rem;
+        }
+        .popupMain div:nth-last-child(1){
+            margin-top: 10vh;
+            
+        }
+        .pop3{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+
+        }
+        .pop3 li{
+            list-style: none;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .pop3 button{
+            border: 1px solid white;
+            outline: 0;
+            background-color: #fff;
+            width: 10rem;
+            height: 2.0rem;
+            border-radius: 7px;
+            font-size: large ;
+            
+        }
+        .f {
+            font-size: 2rem;
+            margin-left: 5px;
+            color: orange;
+            top: 15vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+        .e{
+            font-size: 2rem;
+            color:  rgb(90, 84, 84);
+            margin-left: 5px;
+            top: 15vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+        }
+        .para{
+            font-size: 2rem;
+            margin-left: 5px;
+            top: 15vh;
+            padding-left: 5vw;
+            padding-right: 5vw;
+            color:  rgb(107, 100, 100);
+        }
+        #cancel:hover{
+            cursor: pointer;
+            background-color: rgb(53, 51, 51);
+            border-radius: 5px;
+            scale: 0.8;
+        }
+        #purchase{
+            width: 70vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #purchase:hover{
+            cursor: pointer;
+            background-color: rgb(224, 216, 216);
+        }
+        .features{
+            padding: 50px 12%;
+            font-size: 22px;
+            background-color: black;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0vh;
+
+        }
+        .row{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            /* iske baare me bhi padhna ha  */
+            flex-wrap: wrap;
+        }
+        .text-col{
+            flex-basis: 60%;
+            margin-bottom: 80px;
+        
+        }
+        .img-col{
+            flex-basis: 40%;
+            margin-bottom: 80px;
+        }
+        .img-col img{
+            width: 85%;
+            /* iske baare ma bhi padhna ha  */
+            margin: auto;
+        }
+        .text-col h2{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        .main{
+            background-image: url(./background.jpg);
+            background-size: 100% 100%;
+            height: 100vh;
+        }
+        #press,#press2{
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            border: 0;
+            outline: 0;
+            width: 15vw;
+            height: 3rem;
+            border-radius: 4px;
+        }
+        #press:hover{
+            scale: 0.95;
+            cursor: pointer;
+        }
+        #press:active{
+            scale: 1.05;
+        }
+        #press2:hover{
+            scale: 0.95;
+            cursor: pointer;
+        }
+        #press2:active{
+            scale: 1.05;
+        }
+        ::selection{
+            background-color: grey;
+        }
+        .span1{
+            top: 18vh;
+            margin-left: 13vh;
+        }
+        .h1{
+            margin-left: 20vh;
+        }
+        #cancel{
+            background-color: rgb(21, 20, 20);
+        }
+        .blur#toggle.active{
+            filter: blur(20px);
+        }
+        .user{
+            /* margin-bottom: 30vh; */
+            /* margin-top: -10vh; */
+        }
+        .profile2{
+            display: flex;
+            align-items: center;
+            background-color: aquamarine;
+            justify-content: right;
+        }
+        .profile2 .image2{
+            height: 70px;
+            width: 70px;
+            margin-top: 1vh;
+            margin-right: 2vw;
+            border-radius: 50%;
+            background-image: url(/ACESS3.jpg);
+            background-repeat: no-repeat;
+            background-image: 100% 100%;
+        }
+        .profile{
+            display: flex;
+            height: 10vh;
+            width: 100%;
+            /* background-color: aqua; */
+            justify-content: right;
+            /* margin-left: 40vh; */
+            /* margin-right:  15vh; */
+            margin-top: 4vh;
+            /* margin-top: 2vh; */
+        }
+        .profile img{
+            /* padding-right: 5vh; */
+            outline: 0;
+            margin-right: 7vh;
+            border-radius: 70px;
+        }
+        
+
+    </style>
+</head>
+<body>
+   
+    <div id="blur">
+    <div class="main">
+        <div class="text">
+            <div id="error"></div>
+            
+            <div class="Name">
+                <h4>WEB DEV COURSE</h4>
+                <h1>Want to learn <span class="auto-type">JAVA SCRIPT?</span></h1><br>
+                <p class="gd">We make programming simple and easy to understand</p>
+            </div>
+        </div>
+        <!-- <div class="user"><i class="fa-solid fa-user"></i></div> -->
+        <div class="picture">
+            
+            <div class="photo">
+                
+            </div>
+        </div>
+
+    </div>
+    <div class="content" >
+        <div class="About">
+            <h2>Welcome To <span>WEB DEV COURSE</span></h2>
+        </div>
+        <div class="features">
+            <div class="row">
+                <div class="text-col" >
+                    <h1>What you will learn?</h2><br>
+                    <p>
+                        <li>Build 16 web development projects for your portfolio.</li><br>
+                        <li>After the course you will build ANY website you want.</li><br>
+                        <li>Build fully-fledged websites and web apps for your buisness.</li><br>
+                        <li>You will also learn about javaScript library.</li>
+                    </p>
+                </div>
+                <div class="img-col">
+                    <img src="./about course.png">
+                </div>
+            </div>
+            <div class="row">
+                <div class="img-col" >
+                    <img src="./ACESS3.jpg">
+                </div>
+                <div class="text-col" style="margin-left: 0rem;">
+                    <div style="margin-left: 25vh;">
+                    <h2>Access of this course</h2>
+                    <p> <li>This course is of two months.</li><br>
+                        <li>65 hours on-demand video + more than 20 assignments.</li><br>
+                        <li>Life time access.</li><br>
+                        <li>Certificate of completion will be provided.</li>
+                    </p>
+                </div>
+                </div>
+            </div>
+        
+            <div class="row" id="row">
+                <div class="text-col" >
+                    <h2>Bonus Features</h2>
+                    <li>Resume prepration</li><br>
+                    <li>live online Interview prepration.</li><br>
+                    <li>Placement support for prime members.</li>
+                </div>
+                <div class="img-col">
+                    <img src="./ASNNWEN-removebg-preview.png">
+                </div>
+</div>
+    <div class="BuyButton">
+        <div class="buy">
+            <li><button id="press" onclick="open2()" style="font-size: large;" >Buy</button></li>
+            <li><button id="press2" onclick="openEdu()" style="font-size: large;">Previous page</button></li>
+        </div>
+        <div class="freeSpace">
+        </div>
+    </div>
+</div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        function openEdu(){
+            var win = window.open("", "_self");
+            win.close();
+        }
+        document.getElementById("press").addEventListener("click",appear)
+        document.getElementById("cancel").addEventListener("click",disappear)
+        
+        function appear(){
+            document.getElementById("popup").style.display = "block"
+            
+        }
+        function disappear(){
+            document.getElementById("popup").style.display = "none"
+        }
+    </script>
+    <script>
+         var typed = new Typed(".auto-type",{
+            strings:["jQuery?","ReactJS?",""],
+            typeSpeed: 150,
+            backSpeed : 150,
+            loop: true
+        })
+        
+
+    </script>
+    <script>
+    //    function scrolltoTop() {
+    //     window.scrollTo(0,0);
+    
+    //    }
+       function toggle() {
+            var blur = document.getElementById('press');
+            blur.classList.toggle('active');
+
+            var popup = document.getElementById('popup');
+            popup.classList.toggle(('active'));
+        }
+    </script>
+    <script>
+        function open2(){
+            
+            window.open("https://rzp.io/i/JturEh3MZ");
+                
+            }     
+        
+        
+    </script>
+                
+</html>
